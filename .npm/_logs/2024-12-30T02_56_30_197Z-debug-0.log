@@ -1,0 +1,580 @@
+0 verbose cli /opt/conda/bin/node /opt/conda/bin/npm
+1 info using npm@10.1.0
+2 info using node@v20.9.0
+3 timing npm:load:whichnode Completed in 1ms
+4 timing config:load:defaults Completed in 1ms
+5 timing config:load:file:/opt/conda/lib/node_modules/npm/npmrc Completed in 3ms
+6 timing config:load:builtin Completed in 3ms
+7 timing config:load:cli Completed in 1ms
+8 timing config:load:env Completed in 1ms
+9 timing config:load:file:/home/jovyan/ghl-integration/ghlchat/ghlchat/.npmrc Completed in 0ms
+10 timing config:load:project Completed in 2ms
+11 timing config:load:file:/home/jovyan/.npmrc Completed in 0ms
+12 timing config:load:user Completed in 0ms
+13 timing config:load:file:/opt/conda/etc/npmrc Completed in 0ms
+14 timing config:load:global Completed in 0ms
+15 timing config:load:setEnvs Completed in 0ms
+16 timing config:load Completed in 9ms
+17 timing npm:load:configload Completed in 10ms
+18 timing config:load:flatten Completed in 2ms
+19 timing npm:load:mkdirpcache Completed in 0ms
+20 timing npm:load:mkdirplogs Completed in 0ms
+21 verbose title npm install openai@^4.0.0
+22 verbose argv "install" "openai@^4.0.0"
+23 timing npm:load:setTitle Completed in 0ms
+24 timing npm:load:display Completed in 1ms
+25 verbose logfile logs-max:10 dir:/home/jovyan/.npm/_logs/2024-12-30T02_56_30_197Z-
+26 verbose logfile /home/jovyan/.npm/_logs/2024-12-30T02_56_30_197Z-debug-0.log
+27 timing npm:load:logFile Completed in 6ms
+28 timing npm:load:timers Completed in 0ms
+29 timing npm:load:configScope Completed in 0ms
+30 timing npm:load Completed in 31ms
+31 timing arborist:ctor Completed in 1ms
+32 silly logfile start cleaning logs, removing 1 files
+33 timing idealTree:init Completed in 58ms
+34 timing idealTree:userRequests Completed in 0ms
+35 silly idealTree buildDeps
+36 silly fetch manifest openai@^4.0.0
+37 silly logfile done cleaning log files
+38 http fetch GET 200 https://registry.npmjs.org/openai 174ms (cache updated)
+39 silly fetch manifest zod@^3.23.8
+40 http fetch GET 200 https://registry.npmjs.org/zod 79ms (cache updated)
+41 silly placeDep ROOT openai@4.77.0 REPLACE for: assistants-nextjs@0.1.0 want: ^4.0.0
+42 timing idealTree:#root Completed in 267ms
+43 timing idealTree:node_modules/openai Completed in 0ms
+44 timing idealTree:buildDeps Completed in 268ms
+45 timing idealTree:fixDepFlags Completed in 1ms
+46 timing idealTree Completed in 330ms
+47 timing reify:loadTrees Completed in 331ms
+48 timing reify:diffTrees Completed in 3ms
+49 silly reify moves {}
+50 timing reify:retireShallow Completed in 1ms
+51 timing reify:createSparse Completed in 5ms
+52 timing reify:loadBundles Completed in 0ms
+53 silly audit bulk request {
+53 silly audit   '@next/env': [ '14.1.4' ],
+53 silly audit   '@next/swc-darwin-arm64': [ '14.1.4' ],
+53 silly audit   '@next/swc-darwin-x64': [ '14.1.4' ],
+53 silly audit   '@next/swc-linux-arm64-gnu': [ '14.1.4' ],
+53 silly audit   '@next/swc-linux-arm64-musl': [ '14.1.4' ],
+53 silly audit   '@next/swc-linux-x64-gnu': [ '14.1.4' ],
+53 silly audit   '@next/swc-linux-x64-musl': [ '14.1.4' ],
+53 silly audit   '@next/swc-win32-arm64-msvc': [ '14.1.4' ],
+53 silly audit   '@next/swc-win32-ia32-msvc': [ '14.1.4' ],
+53 silly audit   '@next/swc-win32-x64-msvc': [ '14.1.4' ],
+53 silly audit   '@swc/helpers': [ '0.5.2' ],
+53 silly audit   '@types/debug': [ '4.1.12' ],
+53 silly audit   '@types/estree': [ '1.0.5' ],
+53 silly audit   '@types/estree-jsx': [ '1.0.5' ],
+53 silly audit   '@types/hast': [ '3.0.4' ],
+53 silly audit   '@types/mdast': [ '4.0.3' ],
+53 silly audit   '@types/ms': [ '0.7.34' ],
+53 silly audit   '@types/node': [ '20.12.7', '18.19.31' ],
+53 silly audit   '@types/node-fetch': [ '2.6.11' ],
+53 silly audit   '@types/prop-types': [ '15.7.12' ],
+53 silly audit   '@types/react': [ '18.2.79' ],
+53 silly audit   '@types/unist': [ '3.0.2', '2.0.10' ],
+53 silly audit   '@ungap/structured-clone': [ '1.2.0' ],
+53 silly audit   'abort-controller': [ '3.0.0' ],
+53 silly audit   agentkeepalive: [ '4.5.0' ],
+53 silly audit   asynckit: [ '0.4.0' ],
+53 silly audit   bail: [ '2.0.2' ],
+53 silly audit   busboy: [ '1.6.0' ],
+53 silly audit   'caniuse-lite': [ '1.0.30001599' ],
+53 silly audit   ccount: [ '2.0.1' ],
+53 silly audit   'character-entities': [ '2.0.2' ],
+53 silly audit   'character-entities-html4': [ '2.1.0' ],
+53 silly audit   'character-entities-legacy': [ '3.0.0' ],
+53 silly audit   'character-reference-invalid': [ '2.0.1' ],
+53 silly audit   'client-only': [ '0.0.1' ],
+53 silly audit   'combined-stream': [ '1.0.8' ],
+53 silly audit   'comma-separated-tokens': [ '2.0.3' ],
+53 silly audit   csstype: [ '3.1.3' ],
+53 silly audit   debug: [ '4.3.4' ],
+53 silly audit   ms: [ '2.1.2', '2.1.3' ],
+53 silly audit   'decode-named-character-reference': [ '1.0.2' ],
+53 silly audit   'delayed-stream': [ '1.0.0' ],
+53 silly audit   dequal: [ '2.0.3' ],
+53 silly audit   devlop: [ '1.1.0' ],
+53 silly audit   'estree-util-is-identifier-name': [ '3.0.0' ],
+53 silly audit   'event-target-shim': [ '5.0.1' ],
+53 silly audit   extend: [ '3.0.2' ],
+53 silly audit   'form-data': [ '4.0.0' ],
+53 silly audit   'form-data-encoder': [ '1.7.2' ],
+53 silly audit   'formdata-node': [ '4.4.1' ],
+53 silly audit   'web-streams-polyfill': [ '4.0.0-beta.3' ],
+53 silly audit   'graceful-fs': [ '4.2.11' ],
+53 silly audit   'hast-util-to-jsx-runtime': [ '2.3.0' ],
+53 silly audit   'hast-util-whitespace': [ '3.0.0' ],
+53 silly audit   'html-url-attributes': [ '3.0.0' ],
+53 silly audit   'humanize-ms': [ '1.2.1' ],
+53 silly audit   'inline-style-parser': [ '0.2.3' ],
+53 silly audit   'is-alphabetical': [ '2.0.1' ],
+53 silly audit   'is-alphanumerical': [ '2.0.1' ],
+53 silly audit   'is-decimal': [ '2.0.1' ],
+53 silly audit   'is-hexadecimal': [ '2.0.1' ],
+53 silly audit   'is-plain-obj': [ '4.1.0' ],
+53 silly audit   'js-tokens': [ '4.0.0' ],
+53 silly audit   'longest-streak': [ '3.1.0' ],
+53 silly audit   'loose-envify': [ '1.4.0' ],
+53 silly audit   'mdast-util-from-markdown': [ '2.0.0' ],
+53 silly audit   'mdast-util-mdx-expression': [ '2.0.0' ],
+53 silly audit   'mdast-util-mdx-jsx': [ '3.1.2' ],
+53 silly audit   'mdast-util-mdxjs-esm': [ '2.0.1' ],
+53 silly audit   'mdast-util-phrasing': [ '4.1.0' ],
+53 silly audit   'mdast-util-to-hast': [ '13.1.0' ],
+53 silly audit   'mdast-util-to-markdown': [ '2.1.0' ],
+53 silly audit   'mdast-util-to-string': [ '4.0.0' ],
+53 silly audit   micromark: [ '4.0.0' ],
+53 silly audit   'micromark-core-commonmark': [ '2.0.1' ],
+53 silly audit   'micromark-factory-destination': [ '2.0.0' ],
+53 silly audit   'micromark-factory-label': [ '2.0.0' ],
+53 silly audit   'micromark-factory-space': [ '2.0.0' ],
+53 silly audit   'micromark-factory-title': [ '2.0.0' ],
+53 silly audit   'micromark-factory-whitespace': [ '2.0.0' ],
+53 silly audit   'micromark-util-character': [ '2.1.0' ],
+53 silly audit   'micromark-util-chunked': [ '2.0.0' ],
+53 silly audit   'micromark-util-classify-character': [ '2.0.0' ],
+53 silly audit   'micromark-util-combine-extensions': [ '2.0.0' ],
+53 silly audit   'micromark-util-decode-numeric-character-reference': [ '2.0.1' ],
+53 silly audit   'micromark-util-decode-string': [ '2.0.0' ],
+53 silly audit   'micromark-util-encode': [ '2.0.0' ],
+53 silly audit   'micromark-util-html-tag-name': [ '2.0.0' ],
+53 silly audit   'micromark-util-normalize-identifier': [ '2.0.0' ],
+53 silly audit   'micromark-util-resolve-all': [ '2.0.0' ],
+53 silly audit   'micromark-util-sanitize-uri': [ '2.0.0' ],
+53 silly audit   'micromark-util-subtokenize': [ '2.0.1' ],
+53 silly audit   'micromark-util-symbol': [ '2.0.0' ],
+53 silly audit   'micromark-util-types': [ '2.0.0' ],
+53 silly audit   'mime-db': [ '1.52.0' ],
+53 silly audit   'mime-types': [ '2.1.35' ],
+53 silly audit   nanoid: [ '3.3.7' ],
+53 silly audit   next: [ '14.1.4' ],
+53 silly audit   'node-domexception': [ '1.0.0' ],
+53 silly audit   'node-fetch': [ '2.7.0' ],
+53 silly audit   'parse-entities': [ '4.0.1' ],
+53 silly audit   picocolors: [ '1.0.0' ],
+53 silly audit   postcss: [ '8.4.31' ],
+53 silly audit   'property-information': [ '6.5.0' ],
+53 silly audit   react: [ '18.2.0' ],
+53 silly audit   'react-dom': [ '18.2.0' ],
+53 silly audit   'react-markdown': [ '9.0.1' ],
+53 silly audit   'remark-parse': [ '11.0.0' ],
+53 silly audit   'remark-rehype': [ '11.1.0' ],
+53 silly audit   scheduler: [ '0.23.0' ],
+53 silly audit   'source-map-js': [ '1.2.0' ],
+53 silly audit   'space-separated-tokens': [ '2.0.2' ],
+53 silly audit   streamsearch: [ '1.1.0' ],
+53 silly audit   'stringify-entities': [ '4.0.4' ],
+53 silly audit   'style-to-object': [ '1.0.6' ],
+53 silly audit   'styled-jsx': [ '5.1.1' ],
+53 silly audit   tr46: [ '0.0.3' ],
+53 silly audit   'trim-lines': [ '3.0.1' ],
+53 silly audit   trough: [ '2.2.0' ],
+53 silly audit   tslib: [ '2.6.2' ],
+53 silly audit   typescript: [ '5.4.5' ],
+53 silly audit   'undici-types': [ '5.26.5' ],
+53 silly audit   unified: [ '11.0.4' ],
+53 silly audit   'unist-util-is': [ '6.0.0' ],
+53 silly audit   'unist-util-position': [ '5.0.0' ],
+53 silly audit   'unist-util-remove-position': [ '5.0.0' ],
+53 silly audit   'unist-util-stringify-position': [ '4.0.0' ],
+53 silly audit   'unist-util-visit': [ '5.0.0' ],
+53 silly audit   'unist-util-visit-parents': [ '6.0.1' ],
+53 silly audit   vfile: [ '6.0.1' ],
+53 silly audit   'vfile-message': [ '4.0.2' ],
+53 silly audit   'webidl-conversions': [ '3.0.1' ],
+53 silly audit   'whatwg-url': [ '5.0.0' ],
+53 silly audit   zwitch: [ '2.0.4' ],
+53 silly audit   openai: [ '4.77.0' ]
+53 silly audit }
+54 verbose reify failed optional dependency /home/jovyan/ghl-integration/ghlchat/ghlchat/node_modules/@next/swc-win32-x64-msvc
+55 silly reify mark deleted [
+55 silly reify   '/home/jovyan/ghl-integration/ghlchat/ghlchat/node_modules/@next/swc-win32-x64-msvc'
+55 silly reify ]
+56 verbose reify failed optional dependency /home/jovyan/ghl-integration/ghlchat/ghlchat/node_modules/@next/swc-win32-ia32-msvc
+57 silly reify mark deleted [
+57 silly reify   '/home/jovyan/ghl-integration/ghlchat/ghlchat/node_modules/@next/swc-win32-ia32-msvc'
+57 silly reify ]
+58 verbose reify failed optional dependency /home/jovyan/ghl-integration/ghlchat/ghlchat/node_modules/@next/swc-win32-arm64-msvc
+59 silly reify mark deleted [
+59 silly reify   '/home/jovyan/ghl-integration/ghlchat/ghlchat/node_modules/@next/swc-win32-arm64-msvc'
+59 silly reify ]
+60 verbose reify failed optional dependency /home/jovyan/ghl-integration/ghlchat/ghlchat/node_modules/@next/swc-linux-arm64-musl
+61 silly reify mark deleted [
+61 silly reify   '/home/jovyan/ghl-integration/ghlchat/ghlchat/node_modules/@next/swc-linux-arm64-musl'
+61 silly reify ]
+62 verbose reify failed optional dependency /home/jovyan/ghl-integration/ghlchat/ghlchat/node_modules/@next/swc-linux-arm64-gnu
+63 silly reify mark deleted [
+63 silly reify   '/home/jovyan/ghl-integration/ghlchat/ghlchat/node_modules/@next/swc-linux-arm64-gnu'
+63 silly reify ]
+64 verbose reify failed optional dependency /home/jovyan/ghl-integration/ghlchat/ghlchat/node_modules/@next/swc-darwin-x64
+65 silly reify mark deleted [
+65 silly reify   '/home/jovyan/ghl-integration/ghlchat/ghlchat/node_modules/@next/swc-darwin-x64'
+65 silly reify ]
+66 verbose reify failed optional dependency /home/jovyan/ghl-integration/ghlchat/ghlchat/node_modules/@next/swc-darwin-arm64
+67 silly reify mark deleted [
+67 silly reify   '/home/jovyan/ghl-integration/ghlchat/ghlchat/node_modules/@next/swc-darwin-arm64'
+67 silly reify ]
+68 timing reifyNode:node_modules/@next/swc-win32-x64-msvc Completed in 15ms
+69 timing reifyNode:node_modules/@next/swc-win32-ia32-msvc Completed in 15ms
+70 timing reifyNode:node_modules/@next/swc-win32-arm64-msvc Completed in 15ms
+71 timing reifyNode:node_modules/@next/swc-linux-arm64-musl Completed in 15ms
+72 timing reifyNode:node_modules/@next/swc-linux-arm64-gnu Completed in 16ms
+73 timing reifyNode:node_modules/@next/swc-darwin-x64 Completed in 16ms
+74 timing reifyNode:node_modules/@next/swc-darwin-arm64 Completed in 16ms
+75 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 2415ms
+76 timing auditReport:getReport Completed in 2418ms
+77 silly audit report {
+77 silly audit report   nanoid: [
+77 silly audit report     {
+77 silly audit report       id: 1101163,
+77 silly audit report       url: 'https://github.com/advisories/GHSA-mwcw-c2x4-8c55',
+77 silly audit report       title: 'Predictable results in nanoid generation when given non-integer values',
+77 silly audit report       severity: 'moderate',
+77 silly audit report       vulnerable_versions: '<3.3.8',
+77 silly audit report       cwe: [Array],
+77 silly audit report       cvss: [Object]
+77 silly audit report     }
+77 silly audit report   ],
+77 silly audit report   next: [
+77 silly audit report     {
+77 silly audit report       id: 1099638,
+77 silly audit report       url: 'https://github.com/advisories/GHSA-gp8f-8m3g-qvj9',
+77 silly audit report       title: 'Next.js Cache Poisoning',
+77 silly audit report       severity: 'high',
+77 silly audit report       vulnerable_versions: '>=14.0.0 <14.2.10',
+77 silly audit report       cwe: [Array],
+77 silly audit report       cvss: [Object]
+77 silly audit report     },
+77 silly audit report     {
+77 silly audit report       id: 1100421,
+77 silly audit report       url: 'https://github.com/advisories/GHSA-g77x-44xx-532m',
+77 silly audit report       title: 'Denial of Service condition in Next.js image optimization',
+77 silly audit report       severity: 'moderate',
+77 silly audit report       vulnerable_versions: '>=10.0.0 <14.2.7',
+77 silly audit report       cwe: [Array],
+77 silly audit report       cvss: [Object]
+77 silly audit report     },
+77 silly audit report     {
+77 silly audit report       id: 1101380,
+77 silly audit report       url: 'https://github.com/advisories/GHSA-7gfc-8cq8-jh5f',
+77 silly audit report       title: 'Next.js authorization bypass vulnerability',
+77 silly audit report       severity: 'high',
+77 silly audit report       vulnerable_versions: '>=9.5.5 <14.2.15',
+77 silly audit report       cwe: [Array],
+77 silly audit report       cvss: [Object]
+77 silly audit report     }
+77 silly audit report   ]
+77 silly audit report }
+78 timing reifyNode:node_modules/ms Completed in 2437ms
+79 timing reifyNode:node_modules/micromark-util-resolve-all Completed in 2436ms
+80 timing reifyNode:node_modules/micromark-util-html-tag-name Completed in 2436ms
+81 timing reifyNode:node_modules/micromark-util-encode Completed in 2437ms
+82 timing reifyNode:node_modules/micromark-util-combine-extensions Completed in 2437ms
+83 timing reifyNode:node_modules/client-only Completed in 2437ms
+84 timing reifyNode:node_modules/@types/hast Completed in 2437ms
+85 timing reifyNode:node_modules/@types/ms Completed in 2437ms
+86 timing reifyNode:node_modules/@types/estree-jsx Completed in 2437ms
+87 timing reifyNode:node_modules/is-plain-obj Completed in 2440ms
+88 timing reifyNode:node_modules/longest-streak Completed in 2440ms
+89 timing reifyNode:node_modules/is-hexadecimal Completed in 2440ms
+90 timing reifyNode:node_modules/is-decimal Completed in 2441ms
+91 timing reifyNode:node_modules/is-alphanumerical Completed in 2441ms
+92 timing reifyNode:node_modules/humanize-ms Completed in 2441ms
+93 timing reifyNode:node_modules/is-alphabetical Completed in 2441ms
+94 timing reifyNode:node_modules/@types/unist Completed in 2441ms
+95 timing reifyNode:node_modules/@types/prop-types Completed in 2441ms
+96 timing reifyNode:node_modules/@types/debug Completed in 2441ms
+97 timing reifyNode:node_modules/parse-entities/node_modules/@types/unist Completed in 2444ms
+98 timing reifyNode:node_modules/webidl-conversions Completed in 2445ms
+99 timing reifyNode:node_modules/trim-lines Completed in 2445ms
+100 timing reifyNode:node_modules/space-separated-tokens Completed in 2445ms
+101 timing reifyNode:node_modules/micromark-util-types Completed in 2444ms
+102 timing reifyNode:node_modules/js-tokens Completed in 2444ms
+103 timing reifyNode:node_modules/debug/node_modules/ms Completed in 2445ms
+104 timing reifyNode:node_modules/comma-separated-tokens Completed in 2445ms
+105 timing reifyNode:node_modules/character-reference-invalid Completed in 2445ms
+106 timing reifyNode:node_modules/character-entities-legacy Completed in 2445ms
+107 timing reifyNode:node_modules/character-entities-html4 Completed in 2445ms
+108 timing reifyNode:node_modules/ccount Completed in 2445ms
+109 timing reifyNode:node_modules/@types/node-fetch Completed in 2444ms
+110 timing reifyNode:node_modules/bail Completed in 2445ms
+111 timing reifyNode:node_modules/@next/env Completed in 2444ms
+112 timing reifyNode:node_modules/zwitch Completed in 2449ms
+113 timing reifyNode:node_modules/mime-types Completed in 2447ms
+114 timing reifyNode:node_modules/picocolors Completed in 2448ms
+115 timing reifyNode:node_modules/micromark-util-normalize-identifier Completed in 2447ms
+116 timing reifyNode:node_modules/micromark-util-decode-numeric-character-reference Completed in 2448ms
+117 timing reifyNode:node_modules/micromark-util-decode-string Completed in 2448ms
+118 timing reifyNode:node_modules/micromark-util-classify-character Completed in 2448ms
+119 timing reifyNode:node_modules/micromark-factory-space Completed in 2448ms
+120 timing reifyNode:node_modules/micromark-factory-title Completed in 2448ms
+121 timing reifyNode:node_modules/micromark-factory-whitespace Completed in 2448ms
+122 timing reifyNode:node_modules/html-url-attributes Completed in 2447ms
+123 timing reifyNode:node_modules/graceful-fs Completed in 2447ms
+124 timing reifyNode:node_modules/delayed-stream Completed in 2447ms
+125 timing reifyNode:node_modules/decode-named-character-reference Completed in 2447ms
+126 timing reifyNode:node_modules/combined-stream Completed in 2448ms
+127 timing reifyNode:node_modules/@types/estree Completed in 2447ms
+128 timing reifyNode:node_modules/@types/mdast Completed in 2447ms
+129 timing metavuln:cache:get:security-advisory:nanoid:SQKCup8sGN0ajTqJBTsmG5DRPm6VNoYvtYEU3+oEs0yS1Zc7yA0hMKDHq2B0BcWlfg4+DAnmY2WgCYvhDtBgkA== Completed in 38ms
+130 timing metavuln:cache:get:security-advisory:next:A9m47VBQvL++V9EsVwBseCbPrOK9xk7oLIzrStyVB02IketEwhGsklFuhL1oaYPUn8YGmhlTxpFhF93K/Wfw5Q== Completed in 38ms
+131 timing metavuln:cache:get:security-advisory:next:d2hMvT1neRk1OILN6KsQ2L4sjWpIe19WxzSQJivjdzJVb/hhXgpN5SXMC++Yae4yKIQkpUsP465F2rfLyKo4PA== Completed in 38ms
+132 timing metavuln:cache:get:security-advisory:next:D6WTw+Rp2YFkQ065HbCta60wmL8FISFZuXIwHsy06C4Ka33a+guaJDa6cQ3lv6msO26tV1meNesuiT38Bz8F2g== Completed in 38ms
+133 timing reifyNode:node_modules/mdast-util-to-string Completed in 2452ms
+134 timing reifyNode:node_modules/mdast-util-phrasing Completed in 2452ms
+135 timing reifyNode:node_modules/loose-envify Completed in 2451ms
+136 timing reifyNode:node_modules/estree-util-is-identifier-name Completed in 2452ms
+137 timing reifyNode:node_modules/hast-util-whitespace Completed in 2452ms
+138 timing reifyNode:node_modules/character-entities Completed in 2452ms
+139 timing reifyNode:node_modules/unist-util-stringify-position Completed in 2455ms
+140 timing reifyNode:node_modules/unist-util-position Completed in 2455ms
+141 timing reifyNode:node_modules/micromark-util-sanitize-uri Completed in 2454ms
+142 timing reifyNode:node_modules/micromark-util-chunked Completed in 2454ms
+143 timing reifyNode:node_modules/micromark-factory-destination Completed in 2454ms
+144 timing reifyNode:node_modules/micromark-factory-label Completed in 2454ms
+145 timing reifyNode:node_modules/devlop Completed in 2454ms
+146 timing reifyNode:node_modules/unist-util-remove-position Completed in 2457ms
+147 timing reifyNode:node_modules/remark-parse Completed in 2457ms
+148 timing reifyNode:node_modules/remark-rehype Completed in 2457ms
+149 timing reifyNode:node_modules/parse-entities Completed in 2457ms
+150 timing reifyNode:node_modules/mdast-util-mdxjs-esm Completed in 2456ms
+151 timing reifyNode:node_modules/mdast-util-mdx-expression Completed in 2457ms
+152 timing reifyNode:node_modules/debug Completed in 2456ms
+153 timing reifyNode:node_modules/extend Completed in 2456ms
+154 timing reifyNode:node_modules/vfile-message Completed in 2459ms
+155 timing reifyNode:node_modules/unist-util-is Completed in 2459ms
+156 timing reifyNode:node_modules/micromark-util-character Completed in 2458ms
+157 timing reifyNode:node_modules/unist-util-visit Completed in 2461ms
+158 timing reifyNode:node_modules/react-markdown Completed in 2461ms
+159 timing reifyNode:node_modules/form-data Completed in 2459ms
+160 timing reifyNode:node_modules/trough Completed in 2462ms
+161 timing reifyNode:node_modules/mdast-util-mdx-jsx Completed in 2461ms
+162 timing reifyNode:node_modules/whatwg-url Completed in 2464ms
+163 timing reifyNode:node_modules/inline-style-parser Completed in 2462ms
+164 timing reifyNode:node_modules/unist-util-visit-parents Completed in 2466ms
+165 timing reifyNode:node_modules/streamsearch Completed in 2465ms
+166 timing reifyNode:node_modules/micromark-util-symbol Completed in 2464ms
+167 timing reifyNode:node_modules/hast-util-to-jsx-runtime Completed in 2470ms
+168 timing reifyNode:node_modules/dequal Completed in 2475ms
+169 timing reifyNode:node_modules/agentkeepalive Completed in 2477ms
+170 timing reifyNode:node_modules/node-fetch Completed in 2482ms
+171 timing reifyNode:node_modules/mime-db Completed in 2482ms
+172 timing reifyNode:node_modules/mdast-util-from-markdown Completed in 2482ms
+173 timing reifyNode:node_modules/abort-controller Completed in 2481ms
+174 timing reifyNode:node_modules/micromark-util-subtokenize Completed in 2487ms
+175 timing reifyNode:node_modules/asynckit Completed in 2486ms
+176 timing reifyNode:node_modules/style-to-object Completed in 2488ms
+177 timing reifyNode:node_modules/tr46 Completed in 2488ms
+178 timing reifyNode:node_modules/unified Completed in 2489ms
+179 timing reifyNode:node_modules/event-target-shim Completed in 2491ms
+180 timing reifyNode:node_modules/@ungap/structured-clone Completed in 2490ms
+181 timing reifyNode:node_modules/tslib Completed in 2493ms
+182 timing reifyNode:node_modules/stringify-entities Completed in 2495ms
+183 timing reifyNode:node_modules/source-map-js Completed in 2496ms
+184 timing reifyNode:node_modules/vfile Completed in 2498ms
+185 timing reifyNode:node_modules/nanoid Completed in 2497ms
+186 timing reifyNode:node_modules/scheduler Completed in 2498ms
+187 timing reifyNode:node_modules/react Completed in 2503ms
+188 timing reifyNode:node_modules/undici-types Completed in 2504ms
+189 timing reifyNode:node_modules/node-domexception Completed in 2504ms
+190 timing reifyNode:node_modules/busboy Completed in 2504ms
+191 timing reifyNode:node_modules/@types/react Completed in 2511ms
+192 timing reifyNode:node_modules/property-information Completed in 2515ms
+193 timing reifyNode:node_modules/formdata-node/node_modules/web-streams-polyfill Completed in 2513ms
+194 timing reifyNode:node_modules/form-data-encoder Completed in 2523ms
+195 timing reifyNode:node_modules/formdata-node Completed in 2524ms
+196 http fetch GET 200 https://registry.npmjs.org/nanoid 114ms (cache updated)
+197 timing metavuln:packument:nanoid Completed in 116ms
+198 timing metavuln:load:security-advisory:nanoid:1101163 Completed in 1ms
+199 timing metavuln:calculate:security-advisory:nanoid:1101163 Completed in 117ms
+200 timing reifyNode:node_modules/postcss Completed in 2532ms
+201 timing reifyNode:node_modules/micromark Completed in 2532ms
+202 timing reifyNode:node_modules/mdast-util-to-hast Completed in 2532ms
+203 timing reifyNode:node_modules/csstype Completed in 2532ms
+204 timing reifyNode:node_modules/styled-jsx Completed in 2537ms
+205 timing reifyNode:node_modules/mdast-util-to-markdown Completed in 2542ms
+206 timing reifyNode:node_modules/micromark-core-commonmark Completed in 2566ms
+207 timing reifyNode:node_modules/openai/node_modules/@types/node Completed in 2574ms
+208 timing reifyNode:node_modules/@types/node Completed in 2573ms
+209 timing reifyNode:node_modules/react-dom Completed in 2594ms
+210 timing reifyNode:node_modules/@swc/helpers Completed in 2715ms
+211 timing reifyNode:node_modules/caniuse-lite Completed in 2806ms
+212 timing reifyNode:node_modules/openai Completed in 2825ms
+213 http fetch GET 200 https://registry.npmjs.org/next 440ms (cache updated)
+214 timing metavuln:packument:next Completed in 631ms
+215 timing metavuln:load:security-advisory:next:1099638 Completed in 24ms
+216 timing metavuln:calculate:security-advisory:next:1099638 Completed in 655ms
+217 timing metavuln:load:security-advisory:next:1100421 Completed in 24ms
+218 timing metavuln:calculate:security-advisory:next:1100421 Completed in 678ms
+219 timing metavuln:load:security-advisory:next:1101380 Completed in 22ms
+220 timing metavuln:calculate:security-advisory:next:1101380 Completed in 701ms
+221 timing metavuln:cache:get:security-advisory:postcss:KRlvwonx2tnkfQEzD0AbrMLur2acf8cfQYiBufqS9KclzvETUfaot1QtSY2LVaU+o4xSSr0UqIoIwcXwg3grVg== Completed in 2ms
+222 http fetch GET 200 https://registry.npmjs.org/postcss 41ms (cache updated)
+223 timing metavuln:packument:postcss Completed in 43ms
+224 timing metavuln:load:security-advisory:postcss:SQKCup8sGN0ajTqJBTsmG5DRPm6VNoYvtYEU3+oEs0yS1Zc7yA0hMKDHq2B0BcWlfg4+DAnmY2WgCYvhDtBgkA== Completed in 0ms
+225 timing metavuln:calculate:security-advisory:postcss:SQKCup8sGN0ajTqJBTsmG5DRPm6VNoYvtYEU3+oEs0yS1Zc7yA0hMKDHq2B0BcWlfg4+DAnmY2WgCYvhDtBgkA== Completed in 43ms
+226 timing auditReport:init Completed in 774ms
+227 timing reify:audit Completed in 3193ms
+228 timing reifyNode:node_modules/typescript Completed in 3195ms
+229 timing reifyNode:node_modules/@next/swc-linux-x64-gnu Completed in 3531ms
+230 timing reifyNode:node_modules/@next/swc-linux-x64-musl Completed in 3624ms
+231 timing reifyNode:node_modules/next Completed in 4274ms
+232 timing reify:unpack Completed in 4276ms
+233 timing reify:unretire Completed in 0ms
+234 timing build:queue Completed in 2ms
+235 timing build:link:node_modules/loose-envify Completed in 2ms
+236 timing build:link:node_modules/nanoid Completed in 1ms
+237 timing build:link:node_modules/next Completed in 1ms
+238 timing build:link:node_modules/openai Completed in 1ms
+239 timing build:link:node_modules/typescript Completed in 1ms
+240 timing build:link Completed in 2ms
+241 timing build:deps Completed in 4ms
+242 timing build Completed in 5ms
+243 timing reify:build Completed in 5ms
+244 timing reify:trash Completed in 1ms
+245 timing reify:save Completed in 34ms
+246 timing reify Completed in 4681ms
+247 silly ADD node_modules/openai
+248 silly ADD node_modules/openai/node_modules/@types/node
+249 silly ADD node_modules/zwitch
+250 silly ADD node_modules/whatwg-url
+251 silly ADD node_modules/webidl-conversions
+252 silly ADD node_modules/vfile-message
+253 silly ADD node_modules/vfile
+254 silly ADD node_modules/unist-util-visit-parents
+255 silly ADD node_modules/unist-util-visit
+256 silly ADD node_modules/unist-util-stringify-position
+257 silly ADD node_modules/unist-util-remove-position
+258 silly ADD node_modules/unist-util-position
+259 silly ADD node_modules/unist-util-is
+260 silly ADD node_modules/unified
+261 silly ADD node_modules/undici-types
+262 silly ADD node_modules/typescript
+263 silly ADD node_modules/tslib
+264 silly ADD node_modules/trough
+265 silly ADD node_modules/trim-lines
+266 silly ADD node_modules/tr46
+267 silly ADD node_modules/styled-jsx
+268 silly ADD node_modules/style-to-object
+269 silly ADD node_modules/stringify-entities
+270 silly ADD node_modules/streamsearch
+271 silly ADD node_modules/space-separated-tokens
+272 silly ADD node_modules/source-map-js
+273 silly ADD node_modules/scheduler
+274 silly ADD node_modules/remark-rehype
+275 silly ADD node_modules/remark-parse
+276 silly ADD node_modules/react-markdown
+277 silly ADD node_modules/react-dom
+278 silly ADD node_modules/react
+279 silly ADD node_modules/property-information
+280 silly ADD node_modules/postcss
+281 silly ADD node_modules/picocolors
+282 silly ADD node_modules/parse-entities
+283 silly ADD node_modules/parse-entities/node_modules/@types/unist
+284 silly ADD node_modules/node-fetch
+285 silly ADD node_modules/node-domexception
+286 silly ADD node_modules/next
+287 silly ADD node_modules/nanoid
+288 silly ADD node_modules/ms
+289 silly ADD node_modules/mime-types
+290 silly ADD node_modules/mime-db
+291 silly ADD node_modules/micromark-util-types
+292 silly ADD node_modules/micromark-util-symbol
+293 silly ADD node_modules/micromark-util-subtokenize
+294 silly ADD node_modules/micromark-util-sanitize-uri
+295 silly ADD node_modules/micromark-util-resolve-all
+296 silly ADD node_modules/micromark-util-normalize-identifier
+297 silly ADD node_modules/micromark-util-html-tag-name
+298 silly ADD node_modules/micromark-util-encode
+299 silly ADD node_modules/micromark-util-decode-string
+300 silly ADD node_modules/micromark-util-decode-numeric-character-reference
+301 silly ADD node_modules/micromark-util-combine-extensions
+302 silly ADD node_modules/micromark-util-classify-character
+303 silly ADD node_modules/micromark-util-chunked
+304 silly ADD node_modules/micromark-util-character
+305 silly ADD node_modules/micromark-factory-whitespace
+306 silly ADD node_modules/micromark-factory-title
+307 silly ADD node_modules/micromark-factory-space
+308 silly ADD node_modules/micromark-factory-label
+309 silly ADD node_modules/micromark-factory-destination
+310 silly ADD node_modules/micromark-core-commonmark
+311 silly ADD node_modules/micromark
+312 silly ADD node_modules/mdast-util-to-string
+313 silly ADD node_modules/mdast-util-to-markdown
+314 silly ADD node_modules/mdast-util-to-hast
+315 silly ADD node_modules/mdast-util-phrasing
+316 silly ADD node_modules/mdast-util-mdxjs-esm
+317 silly ADD node_modules/mdast-util-mdx-jsx
+318 silly ADD node_modules/mdast-util-mdx-expression
+319 silly ADD node_modules/mdast-util-from-markdown
+320 silly ADD node_modules/loose-envify
+321 silly ADD node_modules/longest-streak
+322 silly ADD node_modules/js-tokens
+323 silly ADD node_modules/is-plain-obj
+324 silly ADD node_modules/is-hexadecimal
+325 silly ADD node_modules/is-decimal
+326 silly ADD node_modules/is-alphanumerical
+327 silly ADD node_modules/is-alphabetical
+328 silly ADD node_modules/inline-style-parser
+329 silly ADD node_modules/humanize-ms
+330 silly ADD node_modules/html-url-attributes
+331 silly ADD node_modules/hast-util-whitespace
+332 silly ADD node_modules/hast-util-to-jsx-runtime
+333 silly ADD node_modules/graceful-fs
+334 silly ADD node_modules/formdata-node
+335 silly ADD node_modules/formdata-node/node_modules/web-streams-polyfill
+336 silly ADD node_modules/form-data-encoder
+337 silly ADD node_modules/form-data
+338 silly ADD node_modules/extend
+339 silly ADD node_modules/event-target-shim
+340 silly ADD node_modules/estree-util-is-identifier-name
+341 silly ADD node_modules/devlop
+342 silly ADD node_modules/dequal
+343 silly ADD node_modules/delayed-stream
+344 silly ADD node_modules/decode-named-character-reference
+345 silly ADD node_modules/debug
+346 silly ADD node_modules/debug/node_modules/ms
+347 silly ADD node_modules/csstype
+348 silly ADD node_modules/comma-separated-tokens
+349 silly ADD node_modules/combined-stream
+350 silly ADD node_modules/client-only
+351 silly ADD node_modules/character-reference-invalid
+352 silly ADD node_modules/character-entities-legacy
+353 silly ADD node_modules/character-entities-html4
+354 silly ADD node_modules/character-entities
+355 silly ADD node_modules/ccount
+356 silly ADD node_modules/caniuse-lite
+357 silly ADD node_modules/busboy
+358 silly ADD node_modules/bail
+359 silly ADD node_modules/asynckit
+360 silly ADD node_modules/agentkeepalive
+361 silly ADD node_modules/abort-controller
+362 silly ADD node_modules/@ungap/structured-clone
+363 silly ADD node_modules/@types/unist
+364 silly ADD node_modules/@types/react
+365 silly ADD node_modules/@types/prop-types
+366 silly ADD node_modules/@types/node-fetch
+367 silly ADD node_modules/@types/node
+368 silly ADD node_modules/@types/ms
+369 silly ADD node_modules/@types/mdast
+370 silly ADD node_modules/@types/hast
+371 silly ADD node_modules/@types/estree-jsx
+372 silly ADD node_modules/@types/estree
+373 silly ADD node_modules/@types/debug
+374 silly ADD node_modules/@swc/helpers
+375 silly ADD
+376 silly ADD
+377 silly ADD
+378 silly ADD node_modules/@next/swc-linux-x64-musl
+379 silly ADD node_modules/@next/swc-linux-x64-gnu
+380 silly ADD
+381 silly ADD
+382 silly ADD
+383 silly ADD
+384 silly ADD node_modules/@next/env
+385 timing command:install Completed in 4716ms
+386 verbose exit 0
+387 timing npm Completed in 4859ms
+388 info ok

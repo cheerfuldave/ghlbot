@@ -1,7 +1,12 @@
 
+import { Configuration, OpenAIApi } from 'openai';
 import { NextApiRequest, NextApiResponse } from 'next';
-import { assistantConfig } from '../../app/assistant-config';
-import { VercelChatbot } from '../../lib/gohighlevel_bot';
+
+const configuration = new Configuration({
+    apiKey: process.env.OPENAI_API_KEY,
+});
+
+const openai = new OpenAIApi(configuration);
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     if (req.method !== 'POST') {
@@ -9,19 +14,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     try {
-        const { message } = req.body;
-        
-        const chatbot = new VercelChatbot(
-            process.env.GHL_API_TOKEN,
-            process.env.GHL_LOCATION_ID,
-            process.env.OPENAI_API_KEY
-        );
+        const completion = await openai.createChatCompletion({
+            model: "gpt-4",
+            messages: req.body.messages,
+            temperature: 0.7,
+        });
 
-        const response = await chatbot.process_message(message);
-        
-        res.status(200).json(response);
+        return res.status(200).json(completion.data);
     } catch (error) {
-        console.error('Error processing request:', error);
-        res.status(500).json({ message: 'Internal server error' });
+        return res.status(500).json({ message: 'Error processing request' });
     }
 }

@@ -7,6 +7,7 @@
         }
     ],
     "env": {
+        "OPENAI_API_KEY": "@openai_api_key",
         "GOHIGHLEVEL_PRIVATE_INTEGRATIONS_TOKEN": "@ghl_private_token"
     }
 }
