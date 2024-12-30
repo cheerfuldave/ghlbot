@@ -1,20 +1,12 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "api/*.py",
-      "use": "@vercel/python"
+    "version": 2,
+    "builds": [
+        {
+            "src": "package.json",
+            "use": "@vercel/next"
+        }
+    ],
+    "env": {
+        "GOHIGHLEVEL_PRIVATE_INTEGRATIONS_TOKEN": "@ghl_private_token"
     }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "api/$1"
-    }
-  ],
-  "env": {
-    "GHL_API_TOKEN": "@ghl_api_token",
-    "GHL_LOCATION_ID": "@ghl_location_id",
-    "OPENAI_API_KEY": "@openai_api_key"
-  }
 }

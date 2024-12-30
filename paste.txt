@@ -4,7 +4,7 @@ Incorprate express ap[i and only add to the eixsting project and function s tap 
 
 Project Information:
 
-https://github.com/cheerfuldave/ghlbot
+https://github.com/cheerfuldave/ghlchat
 
 WORKING GHL PRIVATE INTEGRATION IMPLEMENTATION:
 

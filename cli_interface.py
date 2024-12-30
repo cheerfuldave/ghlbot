@@ -27,24 +27,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-    parser.add_argument('--express-endpoint', help='Express API endpoint path')
-    parser.add_argument('--express-method', default='GET', help='HTTP method for Express API request')
-    parser.add_argument('--express-data', help='Data for Express API request (JSON format)')
-
-    if args.express_endpoint:
-        try:
-            data = None
-            if args.express_data:
-                import json
-                data = json.loads(args.express_data)
-
-            response = bot.handle_express_request(
-                args.express_endpoint,
-                method=args.express_method,
-                data=data
-            )
-            print("Express API Response:", response)
-        except Exception as e:
-            print("Error handling Express API request:", e)
-    
