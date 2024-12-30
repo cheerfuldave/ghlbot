@@ -1,0 +1,101 @@
+
+/* Admin styles for JuliusAI ChatBot */
+.juliusai-admin-wrap {
+    font-family: 'Roboto', sans-serif;
+    margin: 20px;
+}
+
+.juliusai-tabs {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.juliusai-tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    margin-bottom: -1px;
+    transition: all 0.3s ease;
+}
+
+.juliusai-tab.active {
+    border: 1px solid #ccc;
+    border-bottom-color: #fff;
+    background: #fff;
+}
+
+.juliusai-tab-content {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.juliusai-tab-content.active {
+    display: block;
+}
+
+.preview-window {
+    position: fixed;
+    right: -400px;
+    top: 32px;
+    width: 400px;
+    height: calc(100vh - 32px);
+    background: #fff;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    transition: right 0.3s ease;
+    z-index: 99999;
+}
+
+.preview-window.open {
+    right: 0;
+}
+
+.preview-toggle {
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #2271b1;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px 0 0 4px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.juliusai-form-group {
+    margin-bottom: 20px;
+}
+
+.juliusai-form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.juliusai-form-group input[type="text"],
+.juliusai-form-group textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.juliusai-save-btn {
+    background: #2271b1;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.juliusai-save-btn:hover {
+    background: #135e96;
+}

@@ -1,0 +1,108 @@
+
+/* Admin Settings Page Styles */
+.wp-admin .settings-wrapper {
+    max-width: 1200px;
+    margin: 20px auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.wp-admin .nav-tab-wrapper {
+    border-bottom: 2px solid #2271b1;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.wp-admin .nav-tab {
+    background: #f0f0f1;
+    border: 1px solid #2271b1;
+    border-bottom: none;
+    color: #2271b1;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.wp-admin .nav-tab:hover,
+.wp-admin .nav-tab:focus {
+    background: #fff;
+    color: #135e96;
+}
+
+.wp-admin .nav-tab.nav-tab-active {
+    background: #fff;
+    border-bottom: 2px solid #fff;
+    margin-bottom: -2px;
+}
+
+.wp-admin .tab-content {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.wp-admin .form-table {
+    margin-top: 20px;
+}
+
+.wp-admin .form-table th {
+    padding: 20px 10px 20px 0;
+    width: 200px;
+}
+
+.wp-admin .preview-window {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.wp-admin .preview-window.active {
+    max-height: 500px;
+    padding: 20px;
+}
+
+.wp-admin .button-primary {
+    background: #2271b1;
+    border-color: #2271b1;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: none;
+}
+
+.wp-admin .button-primary:hover,
+.wp-admin .button-primary:focus {
+    background: #135e96;
+    border-color: #135e96;
+}
+
+/* Loading animation */
+.wp-admin .loading {
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+
+.wp-admin .loading:after {
+    content: " ";
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #2271b1;
+    border-color: #2271b1 transparent #2271b1 transparent;
+    animation: loading 1.2s linear infinite;
+}
+
+@keyframes loading {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

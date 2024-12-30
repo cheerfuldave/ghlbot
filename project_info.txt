@@ -1,0 +1,25 @@
+
+Project Information:
+
+1. Objective:
+   - Connect to the GHL Private Integration API to retrieve location details and other data.
+
+2. Key Details:
+   - Base URL: https://services.leadconnectorhq.com
+   - Location ID: me0EnocxsZH10tkDWF5K
+   - Private Integration Token: pit-ca1cdf54-6c93-4bc4-86a4-66d2ae2b738c
+
+3. Required Headers:
+   - Authorization: Bearer <Your_Private_Integration_Token>
+   - Version: 2021-07-28
+   - Content-Type: application/json
+
+4. Example Endpoint:
+   - https://services.leadconnectorhq.com/locations/me0EnocxsZH10tkDWF5K
+
+5. Tools and Libraries:
+   - Python
+   - Requests library for API calls
+
+6. Expected Output:
+   - Status code and JSON response from the API.

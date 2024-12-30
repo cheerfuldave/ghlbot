@@ -1,0 +1,13 @@
+{
+  "base_url": "/user/google-oauth2_112374795659459213156/",
+  "hostname": "0.0.0.0",
+  "password": false,
+  "pid": 7,
+  "port": 8888,
+  "root_dir": "/home/jovyan",
+  "secure": false,
+  "sock": "",
+  "token": "1de5e9d04b7e4a849a7b7a4f772675a8",
+  "url": "http://jupyter-google-2doauth2-5f112374795659459213156:8888/user/google-oauth2_112374795659459213156/",
+  "version": "2.8.0"
+}

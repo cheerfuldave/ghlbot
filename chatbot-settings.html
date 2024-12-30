@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask Your Database Custom Chatbot Settings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2196F3;
+            --secondary-color: #1976D2;
+            --background-color: #f5f5f5;
+            --text-color: #333;
+            --border-radius: 8px;
+        }
+
+        .ayd-settings * {
+            font-family: 'Roboto', sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .ayd-settings {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .ayd-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #2196F3, #1976D2);
+            border-radius: var(--border-radius);
+            color: white;
+        }
+
+        .ayd-header img {
+            height: 50px;
+            margin-right: 20px;
+        }
+
+        .ayd-header h1 {
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        .ayd-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--background-color);
+            padding-bottom: 10px;
+        }
+
+        .ayd-tab {
+            padding: 10px 20px;
+            background: var(--background-color);
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .ayd-tab.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .ayd-tab-content {
+            display: none;
+            padding: 20px;
+            background: var(--background-color);
+            border-radius: var(--border-radius);
+        }
+
+        .ayd-tab-content.active {
+            display: block;
+        }
+
+        .ayd-shortcode-box {
+            background: white;
+            padding: 15px;
+            border-radius: var(--border-radius);
+            margin: 10px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .ayd-shortcode-box code {
+            display: block;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 4px;
+            margin-top: 10px;
+            font-family: monospace;
+        }
+
+        .ayd-preview-toggle {
+            position: fixed;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--primary-color);
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 8px 0 0 8px;
+            z-index: 1000;
+        }
+
+        .ayd-preview-window {
+            position: fixed;
+            right: -600px;
+            top: 0;
+            width: 600px;
+            height: 100vh;
+            background: white;
+            box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+            transition: right 0.3s ease;
+            z-index: 999;
+        }
+
+        .ayd-preview-window.open {
+            right: 0;
+        }
+
+        .ayd-preview-window iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .ayd-form-group {
+            margin-bottom: 20px;
+        }
+
+        .ayd-form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .ayd-form-group input[type="text"],
+        .ayd-form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-size: 14px;
+        }
+
+        .ayd-save-button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+
+        .ayd-save-button:hover {
+            background: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .ayd-tabs {
+                flex-wrap: wrap;
+            }
+            
+            .ayd-preview-window {
+                width: 100%;
+                right: -100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ayd-settings">
+        <div class="ayd-header">
+            <img src="https://storage.googleapis.com/msgsndr/me0EnocxsZH10tkDWF5K/media/67253ad0eded3ba14cf5b7e0.png" alt="Ask Your Database Logo">
+            <h1>Ask Your Database Custom Chatbot</h1>
+        </div>
+
+        <div class="ayd-tabs">
+            <button class="ayd-tab active" data-tab="general">General Settings</button>
+            <button class="ayd-tab" data-tab="appearance">Appearance</button>
+            <button class="ayd-tab" data-tab="shortcodes">Shortcodes</button>
+            <button class="ayd-tab" data-tab="advanced">Advanced</button>
+        </div>
+
+        <div class="ayd-tab-content active" data-tab="general">
+            <div class="ayd-form-group">
+                <label>API Key</label>
+                <input type="text" name="api_key" placeholder="Enter your API key">
+            </div>
+            <div class="ayd-form-group">
+                <label>Bot Name</label>
+                <input type="text" name="bot_name" placeholder="Enter bot name">
+            </div>
+            <button class="ayd-save-button">Save Settings</button>
+        </div>
+
+        <div class="ayd-tab-content" data-tab="appearance">
+            <div class="ayd-form-group">
+                <label>Theme Color</label>
+                <input type="text" name="theme_color" placeholder="#2196F3">
+            </div>
+            <div class="ayd-form-group">
+                <label>Chat Position</label>
+                <select name="chat_position">
+                    <option value="bottom-right">Bottom Right</option>
+                    <option value="bottom-left">Bottom Left</option>
+                </select>
+            </div>
+            <button class="ayd-save-button">Save Appearance</button>
+        </div>
+
+        <div class="ayd-tab-content" data-tab="shortcodes">
+            <div class="ayd-shortcode-box">
+                <h3>Basic Chatbot</h3>
+                <p>Add the chatbot to any page or post:</p>
+                <code>[ayd_chatbot]</code>
+            </div>
+            <div class="ayd-shortcode-box">
+                <h3>Custom Style Chatbot</h3>
+                <p>Add a customized chatbot:</p>
+                <code>[ayd_chatbot theme="dark" position="left"]</code>
+            </div>
+        </div>
+
+        <div class="ayd-tab-content" data-tab="advanced">
+            <div class="ayd-form-group">
+                <label>Custom CSS</label>
+                <textarea name="custom_css" rows="5"></textarea>
+            </div>
+            <div class="ayd-form-group">
+                <label>Custom JavaScript</label>
+                <textarea name="custom_js" rows="5"></textarea>
+            </div>
+            <button class="ayd-save-button">Save Advanced Settings</button>
+        </div>
+    </div>
+
+    <div class="ayd-preview-toggle">
+        Preview
+    </div>
+
+    <div class="ayd-preview-window">
+        <iframe src="https://www.askyourdatabase.com/dashboard/chatbot"></iframe>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tab functionality
+            const tabs = document.querySelectorAll('.ayd-tab');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const tabName = tab.getAttribute('data-tab');
+                    
+                    // Update active tab
+                    document.querySelectorAll('.ayd-tab').forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    
+                    // Update active content
+                    document.querySelectorAll('.ayd-tab-content').forEach(content => {
+                        content.classList.remove('active');
+                        if (content.getAttribute('data-tab') === tabName) {
+                            content.classList.add('active');
+                        }
+                    });
+                });
+            });
+
+            // Preview window functionality
+            const previewToggle = document.querySelector('.ayd-preview-toggle');
+            const previewWindow = document.querySelector('.ayd-preview-window');
+            let isPreviewOpen = false;
+
+            previewToggle.addEventListener('click', () => {
+                isPreviewOpen = !isPreviewOpen;
+                previewWindow.classList.toggle('open');
+                previewToggle.textContent = isPreviewOpen ? 'Close' : 'Preview';
+            });
+        });
+    </script>
+</body>
+</html>

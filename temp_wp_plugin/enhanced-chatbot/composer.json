@@ -1,0 +1,13 @@
+{
+    "name": "juliusai/chatbot",
+    "description": "JuliusAI ChatBot for WordPress",
+    "type": "wordpress-plugin",
+    "require": {
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "JuliusAI\\ChatBot\\": "src/"
+        }
+    }
+}

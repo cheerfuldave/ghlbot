@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask Your Database Custom Chatbot Settings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2196F3;
+            --secondary-color: #1976D2;
+            --background-color: #f5f5f5;
+            --text-color: #333;
+            --border-radius: 8px;
+        }
+
+        * {
+            font-family: 'Roboto', sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2196F3, #1976D2);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+        }
+
+        .header img {
+            height: 50px;
+            margin-right: 20px;
+        }
+
+        .header h1 {
+            color: white;
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--background-color);
+            padding-bottom: 10px;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            background: var(--background-color);
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-weight: 500;
+            color: var(--text-color);
+        }
+
+        .tab.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input[type="text"],
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-size: 14px;
+        }
+
+        .shortcode-box {
+            background: var(--background-color);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            margin-bottom: 15px;
+            font-family: monospace;
+        }
+
+        .save-button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+
+        .save-button:hover {
+            background: var(--secondary-color);
+        }
+
+        .preview-toggle {
+            position: fixed;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--primary-color);
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 8px 0 0 8px;
+            z-index: 1000;
+        }
+
+        .preview-window {
+            position: fixed;
+            right: -600px;
+            top: 0;
+            width: 600px;
+            height: 100vh;
+            background: white;
+            box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+            transition: right 0.3s ease;
+            z-index: 999;
+        }
+
+        .preview-window.open {
+            right: 0;
+        }
+
+        .preview-window iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        @media (max-width: 768px) {
+            .tabs {
+                flex-wrap: wrap;
+            }
+            
+            .preview-window {
+                width: 100%;
+                right: -100%;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="container">
+        <div class="header">
+            <img src="https://storage.googleapis.com/msgsndr/me0EnocxsZH10tkDWF5K/media/67253ad0eded3ba14cf5b7e0.png" alt="Ask Your Database Logo">
+            <h1>Ask Your Database Custom Chatbot</h1>
+        </div>
+
+        <div class="tabs">
+            <button class="tab active" onclick="openTab(event, 'general')">General Settings</button>
+            <button class="tab" onclick="openTab(event, 'appearance')">Appearance</button>
+            <button class="tab" onclick="openTab(event, 'shortcodes')">Shortcodes</button>
+        </div>
+
+        <div id="general" class="tab-content active">
+            <h2>General Settings</h2>
+            <div class="form-group">
+                <label for="api-key">API Key</label>
+                <input type="text" id="api-key" name="api_key" placeholder="Enter your API key">
+            </div>
+            <div class="form-group">
+                <label for="bot-name">Bot Name</label>
+                <input type="text" id="bot-name" name="bot_name" placeholder="Enter bot name">
+            </div>
+        </div>
+
+        <div id="appearance" class="tab-content">
+            <h2>Appearance</h2>
+            <div class="form-group">
+                <label for="theme-color">Theme Color</label>
+                <input type="text" id="theme-color" name="theme_color" placeholder="#2196F3">
+            </div>
+            <div class="form-group">
+                <label for="chat-position">Chat Position</label>
+                <select id="chat-position" name="chat_position">
+                    <option value="bottom-right">Bottom Right</option>
+                    <option value="bottom-left">Bottom Left</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="shortcodes" class="tab-content">
+            <h2>Shortcodes</h2>
+            <div class="shortcode-box">
+                [ayd_chatbot]
+            </div>
+            <div class="shortcode-box">
+                [ayd_chatbot theme="dark" position="left"]
+            </div>
+        </div>
+
+        <button class="save-button">Save Changes</button>
+    </div>
+
+    <div class="preview-toggle">
+        Preview
+    </div>
+
+    <div class="preview-window">
+        <iframe src="https://www.askyourdatabase.com/dashboard/chatbot"></iframe>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tab");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        document.querySelector('.preview-toggle').addEventListener('click', function() {
+            document.querySelector('.preview-window').classList.toggle('open');
+        });
+    </script>
+</body>
+</html>

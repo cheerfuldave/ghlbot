@@ -1,0 +1,31 @@
+Here are the settings, fields, and UI elements extracted from the provided text:
+
+1. **Header/Logo Details**:
+   - The header contains the Ask Your Database logo and the title "Ask Your Database Custom Chatbot".
+   - The logo is displayed as an image with the source `https://storage.googleapis.com/msgsndr/me0EnocxsZH10tkDWF5K/media/67253ad0eded3ba14cf5b7e0.png`.
+
+2. **API Key Settings**:
+   - The "General Settings" tab contains an input field for the "API Key" with the placeholder "Enter your API key".
+
+3. **Chatbot Configuration Fields**:
+   - The "General Settings" tab contains an input field for the "Bot Name" with the placeholder "Enter bot name".
+   - The "Appearance" tab contains:
+     - An input field for the "Theme Color" with the placeholder "#2196F3".
+     - A dropdown select for the "Chat Position" with options "Bottom Right" and "Bottom Left".
+
+4. **Shortcode Formats**:
+   - The "Shortcodes" tab contains two examples of shortcodes:
+     - Basic Chatbot: `[ayd_chatbot]`
+     - Custom Style Chatbot: `[ayd_chatbot theme="dark" position="left"]`
+
+5. **UI Layout and Styling Elements**:
+   - The overall layout is contained within a container with the class `ayd-settings`.
+   - The header has a gradient background and contains the logo and title.
+   - The tabs are displayed using buttons with the class `ayd-tab`, and the active tab is highlighted.
+   - The tab content is displayed in divs with the class `ayd-tab-content`, and only the active content is visible.
+   - The form fields are contained within `ayd-form-group` elements, with labels and input fields.
+   - The "Save" buttons have the class `ayd-save-button` and use the primary color as the background.
+   - The shortcode examples are displayed in `ayd-shortcode-box` elements, with a code block for the shortcode.
+   - There is a preview toggle button and a preview window that displays an iframe with the URL `https://www.askyourdatabase.com/dashboard/chatbot`.
+   - The styling uses CSS variables for the primary color, secondary color, background color, text color, and border radius.
+   - The font used throughout the UI is "Roboto" from Google Fonts.

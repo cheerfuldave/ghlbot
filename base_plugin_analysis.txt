@@ -1,0 +1,33 @@
+The plugin code provides the following settings fields, options, and configuration parameters:
+
+1. **API Key**:
+   - Description: The API Key obtained from the Ask Your Database dashboard.
+   - Default Value: Empty string.
+
+2. **Chatbot Configurations**:
+   - Description: Up to 5 chatbots can be configured, each with a unique name and ID.
+   - Default Values:
+     - Chatbot Name: Empty string.
+     - Chatbot ID: Empty string.
+
+3. **Selected Users**:
+   - Description: The list of users who can access the configured chatbots.
+   - Default Value: Empty array.
+
+The plugin also generates shortcodes for the configured chatbots, which can be used to embed the chatbots into the WordPress site. The shortcode format is:
+
+```
+[chatbot chatbot="Chatbot Name"]
+```
+
+The plugin applies some basic CSS styles to the chatbot container, including:
+
+$$$ \begin{align*}
+.chatbot-container {
+    max-width: 800px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+\end{align*} $$$

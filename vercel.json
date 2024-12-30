@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/*.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "api/$1"
+    }
+  ],
+  "env": {
+    "GHL_API_TOKEN": "@ghl_api_token",
+    "GHL_LOCATION_ID": "@ghl_location_id",
+    "OPENAI_API_KEY": "@openai_api_key"
+  }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "askyourdatabase/wp-chatbot",
+    "description": "A WordPress chatbot plugin for querying databases",
+    "type": "wordpress-plugin",
+    "homepage": "https://askyourdatabase.com",
+    "require": {
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "AskYourDatabase\\": "includes/"
+        }
+    }
+}

@@ -1,0 +1,53 @@
+
+WORKING GHL PRIVATE INTEGRATION IMPLEMENTATION:
+
+BASE_URL = "https://services.leadconnectorhq.com"
+LOCATION_ID = "me0EnocxsZH10tkDWF5K"
+TOKEN = "pit-ce5d622a-ea9a-4bb9-ae65-e64e78f582e6"
+
+import requests
+
+headers = {
+    "Authorization": "Bearer pit-ce5d622a-ea9a-4bb9-ae65-e64e78f582e6",
+    "Version": "2021-07-28",
+    "Content-Type": "application/json"
+}
+
+# Test endpoint
+response = requests.get("https://services.leadconnectorhq.com/locations/me0EnocxsZH10tkDWF5K", headers=headers)
+
+Calendars
+GET Calendar List: /calendars
+GET Calendar Events: /calendars/{calendarId}/events
+POST Add Event: /calendars/{calendarId}/events
+PUT Update Event: /calendars/{calendarId}/events/{eventId}
+DELETE Remove Event: /calendars/{calendarId}/events/{eventId}
+Conversations
+GET All Conversations: /conversations
+POST Send Message: /conversations/messages
+GET Conversation Details: /conversations/{conversationId}
+PUT Update Conversation Status: /conversations/{conversationId}/status
+DELETE Remove Conversation: /conversations/{conversationId}
+Contacts
+GET Contact List: /contacts
+POST Create Contact: /contacts
+PUT Update Contact: /contacts/{contactId}
+DELETE Remove Contact: /contacts/{contactId}
+Custom Fields
+GET All Custom Fields: /custom-fields
+POST Add Custom Field: /custom-fields
+PUT Update Custom Field: /custom-fields/{fieldId}
+DELETE Remove Custom Field: /custom-fields/{fieldId}
+Tasks
+GET All Tasks: /tasks
+POST Add Task: /tasks
+PUT Update Task: /tasks/{taskId}
+DELETE Remove Task: /tasks/{taskId}
+Tags
+GET All Tags: /tags
+POST Add Tag: /tags
+PUT Update Tag: /tags/{tagId}
+DELETE Remove Tag: /tags/{tagId}
+Private Integration Scopes
+Live Chat Message: /conversations/livechat/messages
+Social Planner Tags: /social-planner/tags

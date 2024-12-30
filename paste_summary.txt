@@ -1,0 +1,39 @@
+The provided text appears to be a WordPress plugin that integrates customizable chatbots into a WordPress site using the Ask Your Database API. Here are the key points:
+
+1. **Plugin Information**:
+   - Plugin Name: "WordPress Ask Your Database Custom Chatbot"
+   - Description: "Easily integrate customizable chatbots into your WordPress site using the Ask Your Database API."
+   - Version: 2.3
+   - Author: "Ask Your Database"
+   - Author URI: "https://askyourdatabase.com"
+
+2. **Admin Interface Styles**:
+   - The plugin adds custom CSS styles to the admin interface for the chatbot settings page.
+   - The styles include formatting for the container, header, sections, chatbot configurations, and instructions.
+
+3. **Plugin Settings**:
+   - The plugin registers a new admin menu page called "Chatbot Settings" under the WordPress admin menu.
+   - The settings page allows the user to:
+     - Enter an API key from Ask Your Database.
+     - Configure up to 5 chatbots with unique names and IDs.
+     - Select which WordPress users can access each chatbot.
+
+4. **Shortcode Usage**:
+   - The plugin provides a shortcode `[chatbot name="Your Chatbot Name"]` to embed the chatbot in the content.
+   - The shortcode automatically generates an iframe with the necessary parameters, including the chatbot ID, user name, user email, and API key.
+
+5. **Iframe Integration**:
+   - The chatbot is embedded as an iframe with the following specifications:
+     - Base URL: "https://www.askyourdatabase.com/dashboard/chatbot"
+     - Automatically included parameters: `chatbotid`, `user_name`, `user_email`, `api_key`
+     - Default iframe size: 100% width, 500px height
+
+6. **Permissions and Error Handling**:
+   - The plugin checks if the current user is logged in and has the necessary permissions to access the chatbot.
+   - If the user is not logged in or does not have permission, an error message is displayed instead of the chatbot.
+   - If the chatbot is not found or the API key is not set, an error message is displayed.
+
+7. **Frontend Styles**:
+   - The plugin adds custom CSS styles for the chatbot iframe on the frontend, including a wrapper with a border and box shadow.
+
+Overall, this plugin provides a way to easily integrate customizable chatbots from Ask Your Database into a WordPress site, with features for configuring the chatbots, managing user permissions, and displaying the chatbots using a shortcode.

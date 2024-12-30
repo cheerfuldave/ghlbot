@@ -1,0 +1,31 @@
+
+PROMPT: GHL Private Integration API Implementation
+
+I need to implement a connection to the GoHighLevel Private Integration API with these exact working credentials and endpoints:
+
+1. Project Requirements:
+   - Connect to GHL Private Integration API
+   - Retrieve location data
+   - Use existing working credentials
+   - Implement error handling
+   - Test the connection
+
+2. Working Credentials:
+   Base URL: https://services.leadconnectorhq.com
+   Location ID: me0EnocxsZH10tkDWF5K
+   Token: pit-ca1cdf54-6c93-4bc4-86a4-66d2ae2b738c
+
+3. Implementation Steps:
+   - Set up the connection with working credentials
+   - Test the API endpoint
+   - Handle the response
+   - Implement error handling
+   - Document the working implementation
+
+4. Expected Deliverables:
+   - Working Python code
+   - Implementation documentation
+   - Test results
+   - Error handling examples
+
+Please provide the complete working implementation using these exact credentials and show me the results.

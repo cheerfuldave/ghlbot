@@ -1,0 +1,39 @@
+Certainly, let's go through the exact steps to connect to the GHL Private Integrations API.
+
+## Obtaining the GHL Private Integration Token
+
+1. Log in to your GoHighLevel (GHL) dashboard.
+2. Navigate to **Settings → API Keys → Private Integration**.
+3. Create a new token or copy an existing one.
+4. The token should look like: `pit-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`.
+
+## Complete Working Code Example
+
+```python
+import requests
+
+base_url = "https://services.leadconnectorhq.com"
+token = "pit-ca1cdf54-6c93-4bc4-86a4-66d2ae2b738c"  # Replace with your token
+
+headers = {
+    "Authorization": f"Bearer {token}",
+    "Version": "2021-07-28",
+    "Content-Type": "application/json"
+}
+
+response = requests.get(f"{base_url}/locations/me0EnocxsZH10tkDWF5K", headers=headers)
+print("Status Code:", response.status_code)
+print("Response:", response.json())
+```
+
+## Explanation
+
+1. **Base URL**: The base URL for the GHL Private Integrations API is `https://services.leadconnectorhq.com`.
+2. **Token**: Replace `"pit-ca1cdf54-6c93-4bc4-86a4-66d2ae2b738c"` with your actual GHL Private Integration token.
+3. **Headers**:
+   - `Authorization`: Set the authorization header to `"Bearer {token}"`, where `{token}` is your GHL Private Integration token.
+   - `Version`: Set the version header to `"2021-07-28"`.
+   - `Content-Type`: Set the content type header to `"application/json"`.
+4. **Endpoint**: In the example, we're testing the `/locations/{locationId}` endpoint, where `{locationId}` is your GHL location ID (e.g., `"me0EnocxsZH10tkDWF5K"`).
+
+Let me know if you have any other questions or need further assistance!

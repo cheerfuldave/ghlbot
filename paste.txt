@@ -1,0 +1,20 @@
+I uploaded the files: gohighlevel_bot.py, cli_interface.py
+
+Incorprate express ap[i and only add to the eixsting project and function s tap into it and only update the existing process and project to add this as additional functionality. Don't redo everything sticvk with the existing plan and upgrade to to this  the files only as a sample of the working process for private integrations, Make a copy of the project, do the modifications, and then update MY project ghlbot. Don't get distractred and just try to repodruce the attached files. They just show the correct process to access private integrations and have zero to do with the project other than that. Do not do youir own thing or pretend anything. access my vercel and github with the tokens stored in secret variables and locate the ghlbot project. I want to update it to use private integrations with gohighlevel and add the function to the existing project and hompage as an option and create a new chatbot function that interacts with all the endpoints of the ghl private integrations. Use the existing project infrastrucue and modify it to use this process. The home page should have an additonal option to choose this version of the bot and work like the otjers but to integrate this process. https://help.gohighlevel.com/support/solutions/articles/155000003054-private-integrations-everything-you-need-to-know
+
+Project Information:
+
+https://github.com/cheerfuldave/ghlbot
+
+WORKING GHL PRIVATE INTEGRATION IMPLEMENTATION:
+
+BASE_URL = "https://services.leadconnectorhq.com" LOCATION_ID = "me0EnocxsZH10tkDWF5K" TOKEN = "pit-ce5d622a-ea9a-4bb9-ae65-e64e78f582e6"
+
+import requests
+
+headers = { "Authorization": "Bearer pit-ce5d622a-ea9a-4bb9-ae65-e64e78f582e6", "Version": "2021-07-28", "Content-Type": "application/json" }
+
+Test endpoint
+response = requests.get("https://services.leadconnectorhq.com/locations/me0EnocxsZH10tkDWF5K", headers=headers)
+
+Calendars GET Calendar List: /calendars GET Calendar Events: /calendars/{calendarId}/events POST Add Event: /calendars/{calendarId}/events PUT Update Event: /calendars/{calendarId}/events/{eventId} DELETE Remove Event: /calendars/{calendarId}/events/{eventId} Conversations GET All Conversations: /conversations POST Send Message: /conversations/messages GET Conversation Details: /conversations/{conversationId} PUT Update Conversation Status: /conversations/{conversationId}/status DELETE Remove Conversation: /conversations/{conversationId} Contacts GET Contact List: /contacts POST Create Contact: /contacts PUT Update Contact: /contacts/{contactId} DELETE Remove Contact: /contacts/{contactId} Custom Fields GET All Custom Fields: /custom-fields POST Add Custom Field: /custom-fields PUT Update Custom Field: /custom-fields/{fieldId} DELETE Remove Custom Field: /custom-fields/{fieldId} Tasks GET All Tasks: /tasks POST Add Task: /tasks PUT Update Task: /tasks/{taskId} DELETE Remove Task: /tasks/{taskId} Tags GET All Tags: /tags POST Add Tag: /tags PUT Update Tag: /tags/{tagId} DELETE Remove Tag: /tags/{tagId} Private Integration Scopes Live Chat Message: /conversations/livechat/messages Social Planner Tags: /social-planner/tags

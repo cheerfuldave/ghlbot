@@ -1,0 +1,23 @@
+
+EXACT WORKING GHL PRIVATE INTEGRATION IMPLEMENTATION:
+
+1. BASE URL:
+https://services.leadconnectorhq.com
+
+2. LOCATION ID:
+me0EnocxsZH10tkDWF5K
+
+3. PRIVATE INTEGRATION TOKEN:
+pit-ca1cdf54-6c93-4bc4-86a4-66d2ae2b738c
+
+4. EXACT WORKING PYTHON CODE:
+import requests
+
+base_url = "https://services.leadconnectorhq.com"
+headers = {
+    "Authorization": "Bearer pit-ca1cdf54-6c93-4bc4-86a4-66d2ae2b738c",
+    "Version": "2021-07-28",
+    "Content-Type": "application/json"
+}
+
+response = requests.get("https://services.leadconnectorhq.com/locations/me0EnocxsZH10tkDWF5K", headers=headers)

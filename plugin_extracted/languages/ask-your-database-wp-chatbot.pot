@@ -1,0 +1,16 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Ask Your Database WP Chatbot
+"
+"MIME-Version: 1.0
+"
+"Content-Type: text/plain; charset=UTF-8
+"
+"Content-Transfer-Encoding: 8bit
+"
+
+msgid "Hello"
+msgstr ""
+
+msgid "Welcome to Ask Your Database Chatbot"
+msgstr ""
